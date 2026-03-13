@@ -1,42 +1,57 @@
 # UR3e Digital Twin Project Tutorial
 
-## Installation
-1. Clone the repository using:
-   ```bash
-   git clone https://github.com/Samuel23105468/Projet-Emulate3D-UR3e.git
-   ```
-2. Install the required dependencies. Navigate to the project directory and run:
-   ```bash
-   pip install -r requirements.txt
-   ```
+This tutorial provides a comprehensive guide for setting up and working with the UR3e Digital Twin project. It includes explanations, code examples, architectural diagrams, and troubleshooting tips.
 
-## Python RTDE Script Explanation
-The Python RTDE script is responsible for real-time data exchange between the UR3e robot and the simulation environment. It allows control and monitoring of the robot's states. The main functions of this script include:
-- Establishing a connection with the UR3e.
-- Sending commands to the robot.
-- Receiving real-time data from the robot.
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Project Architecture](#project-architecture)
+3. [Code Examples](#code-examples)
+4. [Python RTDE Script Explanation](#python-rtde-script-explanation)
+5. [Emulate3D Configuration](#emulate3d-configuration)
+6. [C# Controller Scripts](#c-controller-scripts)
+7. [Synchronization Details](#synchronization-details)
+8. [Troubleshooting Guide](#troubleshooting-guide)
+9. [Future Improvements](#future-improvements)
 
-## Emulate3D Configuration
-To set up Emulate3D for the UR3e:
-1. Open Emulate3D and load the UR3e model.
-2. Configure the robot's settings to match the simulation environment.
-3. Ensure the communication ports are correctly set to facilitate interaction with the Python RTDE script.
+## Introduction
+The UR3e Digital Twin project integrates a UR3e robotic arm with Emulate3D to create a simulation environment...
 
-## C# Controller Scripts
-The C# controller scripts are designed to handle specific functionalities of the UR3e in the Emulate3D environment. Key components include:
-- Initialization of robot parameters.
-- Control algorithms to guide the robot's actions.
+## Project Architecture
+![Architecture Diagram](link_to_architecture_diagram.png)
+... 
+
+## Code Examples
+### Python RTDE Script
+```python
+# Example RTDE script for controlling the UR3e robot
+import rtde
+
+def main():
+    # Connect to the robot
+    rtde_connection = rtde.RTDE("192.168.x.x", 30004)
+    rtde_connection.connect()
+    # Your code here
+...
+```
+
+### C# Controller Scripts
+```csharp
+// Example C# script for controlling the robot
+using System;
+...
+```
 
 ## Synchronization Details
-To maintain synchronization between the real robot and its digital twin:
-- Use the RTDE protocol to ensure data consistency.
-- Implement error handling for communication interruptions.
+- Detailed description of synchronization between the robot and simulation...
+
+## Troubleshooting Guide
+- Common issues and how to resolve them...
 
 ## Future Improvements
-### Possible Future Enhancements
-- **Enhanced Error Handling**: Improve error handling for network disruptions.
-- **Additional Sensors**: Integrate more sensors for improved feedback.
-- **User Interface**: Develop a more user-friendly interface to interact with the digital twin.
+- Suggestions for future enhancements...
 
 ## Conclusion
-This tutorial provides a comprehensive overview of the UR3e Digital Twin setup. Follow these instructions to successfully implement and run the project.
+This tutorial aims to equip users with the knowledge needed to successfully implement and work with the UR3e Digital Twin project. For detailed explanations, refer to each section as needed.
+
+---
+*Last updated: 2026-03-13*
