@@ -60,6 +60,8 @@ def main():
     # Your code here
 ...
 ```
+##Python RTDE Script Explanation
+
 
 ### C# Controller Scripts
 ```csharp
