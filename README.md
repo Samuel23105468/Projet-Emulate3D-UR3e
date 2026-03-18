@@ -88,7 +88,9 @@ This means the data is updated every 0.1 second.
 This frequency provides a good compromise between:
 
 -motion fluidity,
+
 -file access stability,
+
 -implementation simplicity.
 
 It is sufficient for a visual digital twin demonstration and for most educational or prototyping scenarios.
@@ -99,16 +101,23 @@ It is sufficient for a visual digital twin demonstration and for most educationa
 This usually indicates that one of the following elements is missing or incorrectly configured:
 
 -motor,
+
 -PositionController,
+
 -link hierarchy,
+
 -script assignment,
+
 -CSV update.  
 
 The first checks should always be:
 
 -confirm that the CSV file is being updated,
+
 -confirm that Emulate3D reads the correct file,
+
 -confirm that each link is associated with the right controller,
+
 -confirm that every moving joint has both a motor and a PositionController.  
 
 
