@@ -24,10 +24,15 @@ The objective is to reproduce the motion of the **real robot** on a **virtual ro
 ## Introduction
 
 The UR3e Digital Twin project connects a **real Universal Robots UR3e arm** to a **virtual robot in Emulate3D**.
+
 The real robot provides its **actual joint angles** through the **RTDE interface**.  
+
 A Python script reads these angles, converts them into degrees, applies calibration offsets, and writes the results into a CSV file.
+
 Emulate3D then reads this file and uses **C# scripts** attached to each robot link to update the corresponding **joint positions** through `PositionController` aspects.
+
 This creates a simple but effective **digital twin architecture** where the virtual robot follows the real robot motion.
+
 ---
 
 ## Project Architecture
