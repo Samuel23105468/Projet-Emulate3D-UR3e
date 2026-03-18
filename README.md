@@ -110,9 +110,7 @@ This usually indicates that one of the following elements is missing or incorrec
 
 -script assignment,
 
--CSV update.<br>
-
-
+-CSV update.  
 The first checks should always be:
 
 -confirm that the CSV file is being updated,
@@ -121,7 +119,7 @@ The first checks should always be:
 
 -confirm that each link is associated with the right controller,
 
--confirm that every moving joint has both a motor and a PositionController.<br>
+-confirm that every moving joint has both a motor and a PositionController.  
 
 
 
@@ -129,7 +127,7 @@ The first checks should always be:
 
 If a link moves in the wrong direction or starts from the wrong orientation, this generally comes from a mismatch between the real robot reference frame and the virtual robot reference frame.
 
-This is solved by calibrating the joint values before they are used by Emulate3D.<br>
+This is solved by calibrating the joint values before they are used by Emulate3D.  
 
 
 
