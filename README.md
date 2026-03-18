@@ -19,7 +19,7 @@ The objective is to reproduce the motion of the **real robot** on a **virtual ro
 7. [Synchronization Details](#synchronization-details)
 8. [Troubleshooting Guide](#troubleshooting-guide)
 9. [Future Improvements](#future-improvements)
-10. [Conclusion](#conclusiob)
+10. [Conclusion](#conclusion)
 
 
 ## Introduction
