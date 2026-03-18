@@ -1,6 +1,13 @@
 # UR3e Digital Twin Project Tutorial
 
-This tutorial provides a comprehensive guide for setting up and working with the UR3e Digital Twin project. It includes explanations, code examples, architectural diagrams, and troubleshooting tips.
+This repository documents the implementation of a **digital twin of a UR3e robot** using:
+
+- a **real UR3e robotic arm**
+- **Python RTDE** for real-time joint acquisition
+- **CSV-based communication**
+- **Emulate3D** for simulation and visualization
+- **C# controllers** attached to each robot joint in Emulate3D
+The objective is to reproduce the motion of the **real robot** on a **virtual robot** in near real time.
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -13,12 +20,32 @@ This tutorial provides a comprehensive guide for setting up and working with the
 8. [Troubleshooting Guide](#troubleshooting-guide)
 9. [Future Improvements](#future-improvements)
 
+
 ## Introduction
-The UR3e Digital Twin project integrates a UR3e robotic arm with Emulate3D to create a simulation environment...
+
+The UR3e Digital Twin project connects a **real Universal Robots UR3e arm** to a **virtual robot in Emulate3D**.
+The real robot provides its **actual joint angles** through the **RTDE interface**.  
+A Python script reads these angles, converts them into degrees, applies calibration offsets, and writes the results into a CSV file.
+Emulate3D then reads this file and uses **C# scripts** attached to each robot link to update the corresponding **joint positions** through `PositionController` aspects.
+This creates a simple but effective **digital twin architecture** where the virtual robot follows the real robot motion.
+---
 
 ## Project Architecture
-![Architecture Diagram](link_to_architecture_diagram.png)
-... 
+The overall system is based on the following data flow:
+
+text'''
+UR3e Real Robot
+      ↓
+RTDE Communication
+      ↓
+Python Acquisition Script
+      ↓
+angles_robot.csv
+      ↓
+Emulate3D C# Joint Controllers
+      ↓
+UR3e Virtual Robot
+
 
 ## Code Examples
 ### Python RTDE Script
