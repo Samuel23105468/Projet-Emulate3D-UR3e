@@ -93,7 +93,7 @@ Pour chaque axe :
 ## 6. Script C# par axe (Exemple pour l'axe1 ->Link1Controller pour l'axe2->Link2Controller)
 Dans un premier temps ajouter un script (Restait sur Script et non Aspect)en faisant clique droit sur l'axe que vous voulez faire dans la hierarchie et cliquer Edit Script.
 
-- [Link1Controller](./code/Link1Controller.cs)
+- [Script Axe 1](./code/Link1Controller.cs)
 
 ### Principe
 
@@ -102,7 +102,6 @@ Dans un premier temps ajouter un script (Restait sur Script et non Aspect)en fai
 ## 7. Lien avec le script Python et gestion de l’offset
 
 À partir de cette étape, le fonctionnement du robot dans Emulate3D dépend directement du script Python.
-- [ur3e_rtde_reader_Csv](./code/ur3e_rtde_reader_Csv.py)
 Le script Python :
 - récupère les angles du robot réel via RTDE  
 - applique un offset si nécessaire  
@@ -112,24 +111,18 @@ Les scripts C# dans Emulate3D lisent ensuite ce fichier pour piloter chaque axe.
 
 ### Accès au script Python
 
-- [Script Python (RTDE → CSV)](./code/python_rtde.py)
+- [Script Python (RTDE → CSV)](./code/ur3e_rtde_reader_Csv.py)
 
 ---
 
-## 8. Principe de l’offset
+## 8. Réglage 
 
-### Définition
+Pour fluidifier la visualisation du robot , 
+il est possible de jouer avec le rafraichissement via les temporisations dans le code python ainsi que dans les scripts C#.
 
-Un offset est une correction appliquée aux angles du robot afin de :
-- aligner le robot virtuel avec le robot réel  
-- corriger les différences de zéro mécanique  
-- adapter les conventions d’angles entre systèmes  
+La mise en place d'offset est aussi nécessaire dans le cadre de certains robot 
+où leur positions réel ne soit pas les mêmes que les positions du fichier 3D.
 
-### Exemple
-
-```python
-angle_corrige = angle_reel + offset
-- Lecture du fichier CSV  
-- Mise à jour de TargetPosition  
+Pour simplifier la démarche mettait le robot à sa position initial et regardé la différence entre le réel et la simulation et a juster les offsset du code python. 
 
 ---
