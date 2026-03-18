@@ -79,11 +79,7 @@ The Python side performs four main functions:
 A calibration step is necessary because the reference positions of the real robot and the virtual robot are not strictly identical.
 This means that some joint values must be corrected before being sent to the simulation so that both robots share the same visual and mechanical reference.
 
-### C# Controller Scripts
-```csharp
-// Example C# script for controlling the robot
-using System;
-...
+
 ```
 
 ## Synchronization Details
