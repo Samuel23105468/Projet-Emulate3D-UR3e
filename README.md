@@ -82,13 +82,9 @@ using System;
 
 ## Synchronization Details
 The system is synchronized through a periodic update cycle.
-
 The real robot data is exported at a fixed interval, and Emulate3D reads the file at the same rate.
-
 The chosen refresh rate is 10 Hz.
-
 This means the data is updated every 0.1 second.
-
 This frequency provides a good compromise between:
 
 -motion fluidity,
@@ -103,22 +99,16 @@ It is sufficient for a visual digital twin demonstration and for most educationa
 This usually indicates that one of the following elements is missing or incorrectly configured:
 
 -motor,
-
 -PositionController,
-
 -link hierarchy,
-
 -script assignment,
-
 -CSV update.  
+
 The first checks should always be:
 
 -confirm that the CSV file is being updated,
-
 -confirm that Emulate3D reads the correct file,
-
 -confirm that each link is associated with the right controller,
-
 -confirm that every moving joint has both a motor and a PositionController.  
 
 
@@ -126,15 +116,11 @@ The first checks should always be:
 ### 2.Joint motion is incorrect:
 
 If a link moves in the wrong direction or starts from the wrong orientation, this generally comes from a mismatch between the real robot reference frame and the virtual robot reference frame.
-
 This is solved by calibrating the joint values before they are used by Emulate3D.  
-
-
 
 ### 3.Motion is unstable
 
 If the robot appears jerky or inconsistent, the issue is usually caused by a mismatch in update rate or by excessive file access.
-
 Using the same refresh interval on both sides improves stability and consistency.
 
 ## Future Improvements
