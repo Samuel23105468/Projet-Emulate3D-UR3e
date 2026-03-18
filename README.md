@@ -31,21 +31,22 @@ This creates a simple but effective **digital twin architecture** where the virt
 ---
 
 ## Project Architecture
-The overall system is based on the following data flow:
+The system is based on a simple and readable architecture:
 
-text'''
+```text
 UR3e Real Robot
       ↓
 RTDE Communication
       ↓
-Python Acquisition Script
+Python Acquisition Layer
       ↓
 angles_robot.csv
       ↓
-Emulate3D C# Joint Controllers
+Emulate3D Joint Controllers
       ↓
 UR3e Virtual Robot
-
+...
+```
 
 ## Code Examples
 ### Python RTDE Script
