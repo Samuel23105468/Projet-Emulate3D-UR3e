@@ -99,9 +99,11 @@ ensuite copier coller ce script en c# et modifier les noms adéquat aux noms dan
 Maintenant il faut que vous avez le script citm dans explorer. (pour cela vous avez besoin de soit le trouver sur le site ou récupérer le fichier emulate sur le git et utiliser celui déjà importer)
 
 on va maintenant référencer chacun des script aux citm 
+
 ![](./image/editref.png)
 
-puis add existing et sélectionner citm 
+Dans la fenêtre qui s'est ouvert, sélectionner add existing et sélectionner citm
+
 ![](./image/listref.png)
 
 ### Principe
