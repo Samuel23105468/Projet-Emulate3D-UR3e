@@ -95,7 +95,7 @@ Dans un premier temps ajouter un script (Restait sur Script et non Aspect)en fai
 
 ![](./image/editscript.png)
 
-ensuite copier coller ce script en c# et modifier les noms adéquat aux noms dans votre hiérarchie et fichier csv.
+ensuite copier coller ce script en c# et modifier les noms par rapport hiérarchie et fichier csv.
 
 - [Script Axe 1](./code/Link1Controller.cs)
 
