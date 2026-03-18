@@ -120,8 +120,6 @@ The first checks should always be:
 
 -confirm that every moving joint has both a motor and a PositionController.  
 
-
-
 ### 2.Joint motion is incorrect:
 
 If a link moves in the wrong direction or starts from the wrong orientation, this generally comes from a mismatch between the real robot reference frame and the virtual robot reference frame.
