@@ -98,7 +98,7 @@ This frequency provides a good compromise between:
 It is sufficient for a visual digital twin demonstration and for most educational or prototyping scenarios.
 
 ## Troubleshooting Guide
-1.Virtual robot does not move:
+### 1.Virtual robot does not move:
 
 This usually indicates that one of the following elements is missing or incorrectly configured:
 
@@ -125,7 +125,7 @@ The first checks should always be:
 
 
 
-2.Joint motion is incorrect:
+### 2.Joint motion is incorrect:
 
 If a link moves in the wrong direction or starts from the wrong orientation, this generally comes from a mismatch between the real robot reference frame and the virtual robot reference frame.
 
@@ -133,7 +133,7 @@ This is solved by calibrating the joint values before they are used by Emulate3D
 
 
 
-3.Motion is unstable
+### 3.Motion is unstable
 
 If the robot appears jerky or inconsistent, the issue is usually caused by a mismatch in update rate or by excessive file access.
 
