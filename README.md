@@ -45,7 +45,6 @@ angles_robot.csv
 Emulate3D Joint Controllers
       ↓
 UR3e Virtual Robot
-...
 ```
 
 ## Code Examples
