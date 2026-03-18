@@ -131,10 +131,27 @@ If the robot appears jerky or inconsistent, the issue is usually caused by a mis
 Using the same refresh interval on both sides improves stability and consistency.
 
 ## Future Improvements
-- Suggestions for future enhancements...
+This project can be extended in several ways.
+
+A first improvement would be to replace CSV communication with a more direct real-time method such as TCP or OPC UA.
+
+A second improvement would be to centralize the control inside Emulate3D so that a single controller manages all six joints instead of one controller per link.
+
+A third improvement would be to compare the real TCP pose with the virtual TCP pose in order to validate the digital twin quantitatively.
+
+Finally, the same architecture could be expanded to model a complete robotic cell including grippers, conveyors, sensors, and workstations.
 
 ## Conclusion
-This tutorial aims to equip users with the knowledge needed to successfully implement and work with the UR3e Digital Twin project. For detailed explanations, refer to each section as needed.
+This project demonstrates a complete digital twin workflow for a UR3e robot:
 
+-acquisition of real robot joint data,
+
+-transfer of the robot state to the simulation,
+
+-configuration of a kinematic virtual model,
+
+-reproduction of the physical motion in Emulate3D.
+
+The result is a functional and understandable digital twin architecture suitable for a master's project in industrial informatics and robotic simulation.
 ---
 *Last updated: 2026-03-13*
