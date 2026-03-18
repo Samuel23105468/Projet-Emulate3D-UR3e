@@ -97,7 +97,38 @@ Dans un premier temps ajouter un script (Restait sur Script et non Aspect)en fai
 
 ### Principe
 
-- Un script par axe  
+- Un script par axe
+
+## 7. Lien avec le script Python et gestion de l’offset
+
+À partir de cette étape, le fonctionnement du robot dans Emulate3D dépend directement du script Python.
+- [ur3e_rtde_reader_Csv](./code/ur3e_rtde_reader_Csv.py)
+Le script Python :
+- récupère les angles du robot réel via RTDE  
+- applique un offset si nécessaire  
+- écrit les valeurs dans un fichier CSV  
+
+Les scripts C# dans Emulate3D lisent ensuite ce fichier pour piloter chaque axe.
+
+### Accès au script Python
+
+- [Script Python (RTDE → CSV)](./code/python_rtde.py)
+
+---
+
+## 8. Principe de l’offset
+
+### Définition
+
+Un offset est une correction appliquée aux angles du robot afin de :
+- aligner le robot virtuel avec le robot réel  
+- corriger les différences de zéro mécanique  
+- adapter les conventions d’angles entre systèmes  
+
+### Exemple
+
+```python
+angle_corrige = angle_reel + offset
 - Lecture du fichier CSV  
 - Mise à jour de TargetPosition  
 
