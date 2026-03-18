@@ -81,7 +81,21 @@ using System;
 ```
 
 ## Synchronization Details
-- Detailed description of synchronization between the robot and simulation...
+The system is synchronized through a periodic update cycle.
+
+The real robot data is exported at a fixed interval, and Emulate3D reads the file at the same rate.
+
+The chosen refresh rate is 10 Hz.
+
+This means the data is updated every 0.1 second.
+
+This frequency provides a good compromise between:
+
+-motion fluidity,
+-file access stability,
+-implementation simplicity.
+
+It is sufficient for a visual digital twin demonstration and for most educational or prototyping scenarios.
 
 ## Troubleshooting Guide
 - Common issues and how to resolve them...
