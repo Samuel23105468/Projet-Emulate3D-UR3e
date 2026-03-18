@@ -13,7 +13,7 @@ The objective is to reproduce the motion of the **real robot** on a **virtual ro
 1. [Introduction](#introduction)
 2. [Project Architecture](#project-architecture)
 3. [Code Examples](#code-examples)
-4. [Python RTDE Script Explanation](#python-rtde-script-explanation)
+4. [Python RTDE Explanation](#python-rtde-script-explanation)
 5. [Emulate3D Configuration](#emulate3d-configuration)
 6. [C# Controller Scripts](#c-controller-scripts)
 7. [Synchronization Details](#synchronization-details)
@@ -60,8 +60,17 @@ def main():
     # Your code here
 ...
 ```
-##Python RTDE Script Explanation
+##Python RTDE Explanation
+Python acts as the data acquisition and formatting layer.
+Its role is not to control the virtual robot directly, but to serve as an intermediary between the physical robot and Emulate3D.
+The Python side performs four main functions:
+-connect to the UR3e through RTDE,
+-read the actual joint positions,
+-convert and calibrate the values,
+-export the data into angles_robot.csv.
 
+A calibration step is necessary because the reference positions of the real robot and the virtual robot are not strictly identical.
+This means that some joint values must be corrected before being sent to the simulation so that both robots share the same visual and mechanical reference.
 
 ### C# Controller Scripts
 ```csharp
