@@ -47,7 +47,7 @@ Chaque axe est piloté par un moteur en rotation.
 
 1. Sélectionner un Link  
 2. Ajouter :  
-   `Add → Mechanism → Motor`  
+   `CAD Is The Model → Motors → Motor`  
 3. Configurer :
    - Type : Rotational  
    - Axe de rotation : selon le joint  
@@ -71,7 +71,7 @@ Le PositionController permet de piloter l’angle d’un axe.
 
 Pour chaque Link :
 
-`Add → Control → PositionController`
+`CAD Is The Model → Motor Controller → Position Controller`
 
 ### Résultat attendu
 
