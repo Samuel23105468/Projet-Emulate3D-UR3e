@@ -92,10 +92,13 @@ Pour chaque axe :
 
 ## 6. Script C# par axe (Exemple pour l'axe1 ->Link1Controller pour l'axe2->Link2Controller)
 Dans un premier temps ajouter un script (Restait sur Script et non Aspect)en faisant clique droit sur l'axe que vous voulez faire dans la hierarchie et cliquer Edit Script.
+
 ![](./image/editscript.png)
 
 ensuite copier coller ce script en c# et modifier les noms adéquat aux noms dans votre hiérarchie et fichier csv.
+
 - [Script Axe 1](./code/Link1Controller.cs)
+
 Maintenant il faut que vous avez le script citm dans explorer. (pour cela vous avez besoin de soit le trouver sur le site ou récupérer le fichier emulate sur le git et utiliser celui déjà importer)
 
 on va maintenant référencer chacun des script aux citm 
