@@ -60,7 +60,7 @@ def main():
     # Your code here
 ...
 ```
-## Python RTDE Explanation
+4. [Python RTDE Explanation](#python-rtde-explanation)
 Python acts as the data acquisition and formatting layer.
 Its role is not to control the virtual robot directly, but to serve as an intermediary between the physical robot and Emulate3D.
 The Python side performs four main functions:
